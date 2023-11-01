@@ -1,0 +1,28 @@
+print("tell your first Lesson Score")
+first=int(input())
+print("tell your second Lesson Score")
+second=int(input())
+print("tell your third Lesson Score")
+third=int(input())
+print("tell your four Lesson Score")
+four=int(input())
+print("tell your five Lesson Score")
+five=int(input())
+print("tell your six Lesson Score")
+six=int(input())
+print("tell your seven Lesson Score")
+seven=int(input())
+print("tell your eight Lesson Score")
+eight=int(input())
+print("tell your nine Lesson Score")
+nine=int(input())
+print("tell your ten Lesson Score")
+ten=int(input())
+print("plz wait we calcuting")
+print("...")
+
+def score(a , b , c , d , e , f , g , h , i , k):
+    print(a+b+c+d+f+g+h+i+k)
+
+score(first,second,third,four,five,six,seven,eight,nine,ten)
+
