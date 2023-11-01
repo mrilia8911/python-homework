@@ -1,3 +1,4 @@
+#puting prints and inputs
 print("tell your first Lesson Score")
 first=int(input())
 print("tell your second Lesson Score")
@@ -18,11 +19,17 @@ print("tell your nine Lesson Score")
 nine=int(input())
 print("tell your ten Lesson Score")
 ten=int(input())
+#input ends
+#going to loading...
 print("plz wait we calcuting")
 print("...")
+#loading ends
 
+#function
 def score(a , b , c , d , e , f , g , h , i , k):
     print(a+b+c+d+f+g+h+i+k)
 
 score(first,second,third,four,five,six,seven,eight,nine,ten)
+#functions ends
 
+#the project has been ended
