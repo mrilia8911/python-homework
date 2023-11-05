@@ -1,1 +1,6 @@
-
+#start project
+thisset = {}
+print("add a fruit on sets")
+sets= input()
+thisset.add(sets)
+print(thisset)
