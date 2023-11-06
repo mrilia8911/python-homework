@@ -1,9 +1,15 @@
-#start
-thisset = {"apple", "banana", "cherry"}
-mylist = ["kiwi", "orange"]
+#start project
+Sets = {"empty"}
 
-thisset.update(mylist)
+Sets.remove("empty")
 
-print(thisset)
+addFruits = input("add fruit :")
+
+Sets.add(addFruits)
+
+for s in Sets:
+    addFruits = input("add fruit :")
+    Sets.add(addFruits)
+    print(Sets) 
 
 #end
