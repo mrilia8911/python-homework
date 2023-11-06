@@ -1,6 +1,9 @@
-#start project
-thisset = {}
-print("add a fruit on sets")
-sets= input()
-thisset.add(sets)
+#start
+thisset = {"apple", "banana", "cherry"}
+mylist = ["kiwi", "orange"]
+
+thisset.update(mylist)
+
 print(thisset)
+
+#end
