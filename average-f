@@ -1,23 +1,23 @@
 #puting prints and inputs
-print("tell your first Lesson Score")
+print("tell your riazi Score")
 first=int(input())
-print("tell your second Lesson Score")
+print("tell your farsi Score")
 second=int(input())
-print("tell your third Lesson Score")
+print("tell your kar va fanavari Score")
 third=int(input())
-print("tell your four Lesson Score")
+print("tell your negaresh Score")
 four=int(input())
-print("tell your five Lesson Score")
+print("tell your oloom Score")
 five=int(input())
-print("tell your six Lesson Score")
+print("tell your english Score")
 six=int(input())
-print("tell your seven Lesson Score")
+print("tell your motaleat Score")
 seven=int(input())
-print("tell your eight Lesson Score")
+print("tell your arabi Score")
 eight=int(input())
-print("tell your nine Lesson Score")
+print("tell your varzesh Score")
 nine=int(input())
-print("tell your ten Lesson Score")
+print("tell your art Score")
 ten=int(input())
 #input ends
 #going to loading...
@@ -27,7 +27,7 @@ print("...")
 
 #function
 def score(a , b , c , d , e , f , g , h , i , k):
-    print(a+b+c+d+f+g+h+i+k)
+    print((a+b+c+d+f+g+h+i+k)/10)
 
 score(first,second,third,four,five,six,seven,eight,nine,ten)
 #functions ends
