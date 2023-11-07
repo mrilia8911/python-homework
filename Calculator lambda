@@ -1,23 +1,31 @@
 #start
 
 #input
-inp1 = int(input("plz enter your first num"))
-inp2 = int(input("plz enter your second num"))
+print("choose your operator")
+op = input("zarb or taghsim or menha or jam:")
+inp1 = int(input("plz enter your first num:"))
+inp2 = int(input("plz enter your second num:"))
 
 #lambda
-m = lambda a, b : a - b
-t = lambda a, b : a / b
-j = lambda a, b : a + b
-z = lambda a, b : a * b
+if op == ("menha"):
+    m = lambda a, b : a - b
+    print("menha :")
+    print(m( inp1, inp2))
+    
+elif op == ("zarb") :
+    z = lambda a, b : a * b
+    print("zarb :")
+    print(z(inp1, inp2))
+    
+elif op == ("taghsim"):
+    t = lambda a, b : a / b
+    print("taghsim :")
+    print(t(inp1, inp2))
 
-#print
-print("menha :")
-print(z(inp1, inp2))
-print("taghsim :")
-print(j( inp1, inp2))
-print("jam :")
-print(t(inp1, inp2))
-print("zarb :")
-print(m( inp1, inp2))
+elif op == ("jam"):
+    j = lambda a, b : a + b
+    print("jam :")
+    print(j( inp1, inp2))
+
 
 #end
