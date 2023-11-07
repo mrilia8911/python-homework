@@ -1,23 +1,30 @@
+#start
+#input
 inp1 = int(input("plz enter your first num"))
 inp2 = int(input("plz enter your sec num"))
 
-
+#function zarb
 def zarb(z):
   print(z, inp1 * inp2)
   
 zarb("zarb :")
 
+#function jam
 def jam(j):
   print(j, inp1 + inp2)
 
 jam("jam :")
 
+#function menha
 def menha(m):
   print(m, inp1 - inp2)
 
 menha("menha :")
 
+#function taghsim
 def taghsim(t):
   print(t, inp1 / inp2)
 
 taghsim("taghsim :")
+
+#end
