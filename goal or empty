@@ -1,15 +1,19 @@
+#start
 import random
+#print
 print("welcome to goal or empty champion ship final")
 print("")
 print("and the winner will get 1000 $")
 print("")
 print("will you enter to this champion ship final? yes or no")
 print("")
+#input
 yn = input()
 l = int(0)
 r = int(0)
 l7 = int(0)
 r7 = int(0)
+#if
 if yn == "yes" :
     name = input("ok and your name?")
     print("")
@@ -322,3 +326,4 @@ if yn == "yes" :
 else :
     print("ok goodbye")
     exit()
+#end
