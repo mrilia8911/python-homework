@@ -34,7 +34,7 @@ rockb = int(0)
 paperb = int(0)
 scissorb = int(0)
 
-rpcb = random.randrange(1,3)
+rpcb = random.randint(1,3)
 
 print("ok the robot choosed")
 print("")
