@@ -73,16 +73,18 @@ paperb = int(0)
 scissorb = int(0)
 
 #random
-rpcb = random.randrange(1,3)
+rpcb = random.randint(1,3)
 
 #some prints and result of the game
 print(f"ok the {namece} choosed")
 print("")
-print("and the winner is !!!!!!!!")
+print(f"and the {namece} answer is !!!!!!!")
 print("")
 #if
 if rpcb == 1 :
     if rpc == "rock":
+        print(f"{namece} : rock")
+        print("")
         print("oh theres 1-1")
         print("")
         print("going to random winner!!!!")
@@ -98,11 +100,15 @@ if rpcb == 1 :
             print(f"{namece}:{losece}")
             exit()
     elif rpc == "paper":
+        print(f"{namece} : rock")
+        print("")
         print(f"the winner is {name} !!!!")
         print("")
         print(f"{namece}:{losece}")
         exit()
     elif rpc == "scissor":
+        print(f"{namece} : rock")
+        print("")
         print(f"and the winner is {namece}!!!")
         print("")
         print(f"{namece}:{wince}")
@@ -114,10 +120,14 @@ if rpcb == 1 :
 #if 2
 elif rpcb == 2 :
     if rpc == "rock":
+        print(f"{namece} : paper")
+        print("")
         print(f"the winner is {namece} !!!!")
         print("")
         print(f"{namece}:{wince}")
     elif rpc == "paper":
+        print(f"{namece} : paper")
+        print("")
         print("oh theres 1-1")
         print("")
         print("going to random winner!!!!")
@@ -132,7 +142,9 @@ elif rpcb == 2 :
             print("")
             print(f"{namece}:{losece}")
             exit()
-    elif rpc == "scissor":
+    elif rpc == "paper":
+        print(f"{namece} : scissor")
+        print("")
         print(f"the winner is {name} !!!")
         print("")
         print(f"{namece}:{losece}")
@@ -148,11 +160,13 @@ elif rpcb == 2 :
 
 #if 3
 elif rpcb == 3 :
-    if rpc == "rock":
+    if rpc == "scissor":
+        print(f"{namece} : scissor")
+        print("")
         print(f"the winner is {name} !!!!")
         print("")
         print(f"{namece}:{losece}")
-    elif rpc == "paper":
+    elif rpc == "scissor":
         print(f"the winner is {namece} !!!!!")
         print("")
         print(f"{namece}:{wince}")
