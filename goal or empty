@@ -1,329 +1,493 @@
-#start
+#import random
 import random
-#print
-print("welcome to goal or empty champion ship final")
+#some prints to players know what the game is
+print("welcome to goal or empty champion ship")
 print("")
-print("and the winner will get 1000 $")
+print("and the winner will get 1,000,000 Rials!")
 print("")
-print("will you enter to this champion ship final? yes or no")
+#making the hand for hiding and guessing the goal
+l1 = int(0)
+r1 = int(0)
+l2 = int(0)
+r2 = int(0)
+l3 = int(0)
+r3 = int(0)
+
+#taking the names to know the players
+p1_name = input("player 1 , enter your name?")
+p2_name = input("player 2 , enter your name?")
+p3_name = input("player 3 , enter your name?")
+p4_name = input("player 4 , enter your name?")
+
+#starting the games
+print("so were gonna start the semi-finals")
 print("")
-#input
-yn = input()
-l = int(0)
-r = int(0)
-l7 = int(0)
-r7 = int(0)
-#if
-if yn == "yes" :
-    name = input("ok and your name?")
+print(f"{p1_name} and {p2_name} are gonna fight each other")
+print("")
+print(f"{p3_name} and {p4_name} are gonna fight each other")
+print("")
+print(f"players {p1_name} and {p2_name} get ready")
+print("")
+print("these rounds are a duel , it means one player will be the gusser and one player will hide the goal")
+#random guesser and hider
+rdg = random.randint(1,2)
+if rdg == 1:
+    print(f"player {p1_name} is the gusser")
+    print(f"and the player {p2_name} is the hider")
     print("")
-    print("ok you have only one enemy")
-    print("")
-    print("and your enemy is cristiano ronaldo!!!")
-    print("")
-    print("cristiano : hello im gonna win this champion ship!!!!")
-    print("")
-    print("ok lets see who win this game!!!")
-    print(f"{name} plz choose your gonna put the ball in left or right?")
-    lr = input()
-    if lr == "left" :
-        l +=1
-    elif lr == "right" :
-        r +=1
-    else :
-        print("your answer was wrong")
-        print("run the file again")
-    print("ok lets see What does cristiano choose!!")
-    rnd = random.randint(l , r)
-    if rnd == l :
-        if l == 0 :
-            print("cristiano choose wrong")
-            print("")
-            print("cristiano : ahh man")
-            print("")
-            print(f"ok and {name} have a chance to get that 1000 $")
-            print("")
-            print("lets see")
-            print("")
-            print("ronaldo plz choose left or right")
-            print("")
-            print("ok and ilia , ronaldo choosed left or right?")
-            rnd7 = random.randint(l7, r7)
-            if rnd7 == l7 :
-                l7 += 1
-            elif rnd7 == r7:
-                r7 += 1
+    #hiding the goal
+    print(f"player {p2_name} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        #adding the goal to hand
+        r1 += 1
+        #spacing to gusser didnt notice which hand is the goal
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        #guessing
+        print(f"player {p1_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r1 > 0 :
+                sfinal_win1 = p1_name
+                print(f"nice guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
             else :
-                print("wrong")
-                exit()
-            choose = input()
-            if choose == "left" :
-                if l7 == 1 :
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print(f"and the {name} has won the 1000$ prize")
-                    exit()
+                sfinal_win1 = p2_name
+                print(f"bad guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l1 > 0 :
+                sfinal_win1 = p1_name
+                print(f"nice guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
+            else :
+                sfinal_win1 = p2_name
+                print(f"bad guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
 
-                elif l7 == 0 :
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print("and were going to take random winner")
-                    win = random.randint(1, 2)
-                    if win == 1 :
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2 :
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                else :
-                    print("wrong")
-                    exit()
+    elif hidech == "left" or "l" :
+        l1 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p1_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r1 > 0 :
+                sfinal_win1 = p1_name
+                print(f"nice guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
+            else :
+                sfinal_win1 = p2_name
+                print(f"bad guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l1 > 0 :
+                sfinal_win1 = p1_name
+                print(f"nice guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
+            else :
+                sfinal_win1 = p2_name
+                print(f"bad guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
 
-            elif choose == "right" :
-                if r7 == 1 :
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print(f"and the {name} has won the 1000$ prize")
+if rdg == 2:
+    print(f"player {p2_name} is the gusser")
+    print(f"and the player {p1_name} is the hider")
+    print("")
+    print(f"player {p1_name} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        r1 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p2_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r1 > 0 :
+                sfinal_win1 = p2_name
+                print(f"nice guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+            else :
+                sfinal_win1 = p1_name
+                print(f"bad guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l1 > 0 :
+                sfinal_win1 = p2_name
+                print(f"nice guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+            else :
+                sfinal_win1 = p1_name
+                print(f"bad guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
 
-                elif r7 == 0 :
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print("and were going to take random winner")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                    exit()
-                else :
-                    print("wrong")
-                    exit()
-
-
-        elif l == 1 :
-            print("cristiano choose correct goal")
-            print("")
-            print("cristiano : suiiiiiiiiiii")
-            print("")
-            print(f"ok and {name} have a chance to get that 1-1")
-            print("")
-            print("lets see")
-            print("")
-            print("ronaldo plz choose left or right")
-            print("")
-            print("ok and ilia , ronaldo choosed left or right?")
-            rnd7 = random.randint(l7, r7)
-            if rnd7 == l7:
-                l7 += 1
-            elif rnd7 == r7:
-                r7 += 1
-            else:
-                print("wrong")
-                exit()
-            choose = input()
-            if choose == "left":
-                if l7 == 1:
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print("ok and now we going to random winner!!!")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                elif l7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print(f"{name} your get lost!!")
-                    exit()
-
-            elif choose == "right":
-                if r7 == 1:
-                    print(f"{name} your choose was right")
-                    print("")
-                    print("ok and now we going to random winner!!!")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                elif r7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print(f"{name} your get lost!!")
-                    exit()
-                else:
-                    print("wrong")
-                    exit()
-
-    elif rnd == r :
-        if r == 0:
-            print("cristiano choose wrong")
-            print("")
-            print("cristiano : ahh man")
-            print("")
-            print(f"ok and {name} have a chance to get that 1000 $")
-            print("")
-            print("lets see")
-            print("")
-            print("ronaldo plz choose left or right")
-            print("")
-            print("ok and ilia , ronaldo choosed left or right?")
-            rnd7 = random.randint(l7, r7)
-            if rnd7 == l7:
-                l7 += 1
-            elif rnd7 == r7:
-                r7 += 1
-            else:
-                print("wrong")
-                exit()
-            choose = input()
-            if choose == "left":
-                if l7 == 1:
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print(f"and the {name} has won the 1000$ prize")
-                    exit()
-
-                elif l7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print("and were going to take random winner")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                else:
-                    print("wrong")
-                    exit()
-
-            elif choose == "right":
-                if r7 == 1:
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print(f"and the {name} has won the 1000$ prize")
-
-                elif r7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print("and were going to take random winner")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                    exit()
-                else:
-                    print("wrong")
-                    exit()
-
-
-        elif r == 1:
-            print("cristiano choose correct goal")
-            print("")
-            print("cristiano : suiiiiiiiiiii")
-            print("")
-            print(f"ok and {name} have a chance to get that 1-1")
-            print("")
-            print("lets see")
-            print("")
-            print("ronaldo plz choose left or right")
-            print("")
-            print("ok and ilia , ronaldo choosed left or right?")
-            rnd7 = random.randint(l7, r7)
-            if rnd7 == l7:
-                l7 += 1
-            elif rnd7 == r7:
-                r7 += 1
-            else:
-                print("wrong")
-                exit()
-            choose = input()
-            if choose == "left":
-                if l7 == 1:
-                    print(f"{name} your choose was correct")
-                    print("")
-                    print("ok and now we going to random winner!!!")
-                    win = random.randint(1, 2)
-                    if win == 1:
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == 2:
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                elif l7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print(f"{name} your get lost!!")
-                    exit()
-
-            elif choose == "right":
-                if r7 == 1:
-                    print(f"{name} your choose was right")
-                    print("")
-                    print("ok and now we going to random winner!!!")
-                    win = random.randint(1, 2)
-                    if win == "ronaldo":
-                        print("")
-                        print("ronaldo is the winner")
-                        exit()
-                    elif win == "player":
-                        print("")
-                        print(f"{name} is the winner")
-                        exit()
-                    else :
-                        exit()
-                elif r7 == 0:
-                    print(f"{name} your choose was wrong")
-                    print("")
-                    print(f"{name} your get lost!!")
-                    exit()
-            else:
-                print("wrong")
-                exit()
+    elif hidech == "left" or "l" :
+        l1 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p2_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r1 > 0 :
+                sfinal_win1 = p2_name
+                print(f"nice guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+            else :
+                sfinal_win1 = p1_name
+                print(f"bad guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l1 > 0 :
+                sfinal_win1 = p2_name
+                print(f"nice guess , player {p2_name} is the winner")
+                print("")
+                print(f"player {p2_name} will go to final!")
+            else :
+                sfinal_win1 = p1_name
+                print(f"bad guess , player {p1_name} is the winner")
+                print("")
+                print(f"player {p1_name} will go to final!")
 
 
 
-else :
-    print("ok goodbye")
-    exit()
-#end
+
+print("so were gonna start the semi-finals round-2")
+print("")
+print(f"{p3_name} and {p4_name} are gonna fight each other")
+print("")
+print(f"players {p3_name} and {p4_name} get ready")
+print("")
+print("these rounds are a duel , it means one player will be the gusser and one player will hide the goal")
+rdg = random.randint(1,2)
+if rdg == 1:
+    print(f"player {p3_name} is the gusser")
+    print(f"and the player {p4_name} is the hider")
+    print("")
+    print(f"player {p2_name} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        r2 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p3_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r2 > 0 :
+                sfinal_win2 = p3_name
+                print(f"nice guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+            else :
+                sfinal_win2 = p4_name
+                print(f"bad guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l2 > 0 :
+                sfinal_win2 = p3_name
+                print(f"nice guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+            else :
+                sfinal_win2 = p4_name
+                print(f"bad guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+
+    elif hidech == "left" or "l" :
+        l2 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p3_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r2 > 0 :
+                sfinal_win2 = p3_name
+                print(f"nice guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+            else :
+                sfinal_win2 = p4_name
+                print(f"bad guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l2 > 0 :
+                sfinal_win2 = p3_name
+                print(f"nice guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+            else :
+                sfinal_win2 = p4_name
+                print(f"bad guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+
+if rdg == 2:
+    print(f"player {p4_name} is the gusser")
+    print(f"and the player {p3_name} is the hider")
+    print("")
+    print(f"player {p3_name} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        r2 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p4_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r2 > 0 :
+                sfinal_win2 = p4_name
+                print(f"nice guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+            else :
+                sfinal_win2 = p3_name
+                print(f"bad guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l2 > 0 :
+                sfinal_win2 = p4_name
+                print(f"nice guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+            else :
+                sfinal_win2 = p3_name
+                print(f"bad guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+
+    elif hidech == "left" or "l" :
+        l2 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {p4_name} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r2 > 0 :
+                sfinal_win2 = p4_name
+                print(f"nice guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+            else :
+                sfinal_win2 = p3_name
+                print(f"bad guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+        elif guess == "left" or "l" :
+            if l2 > 0 :
+                sfinal_win2 = p4_name
+                print(f"nice guess , player {p4_name} is the winner")
+                print("")
+                print(f"player {p4_name} will go to final!")
+            else :
+                sfinal_win2 = p3_name
+                print(f"bad guess , player {p3_name} is the winner")
+                print("")
+                print(f"player {p3_name} will go to final!")
+
+
+
+
+
+print("so were gonna start the final!")
+print("")
+print(f"{sfinal_win1} and {sfinal_win2} are gonna fight each other")
+print("")
+print(f"players {sfinal_win1} and {sfinal_win2} get ready")
+print("")
+print("these rounds are a duel , it means one player will be the gusser and one player will hide the goal")
+rdg = random.randint(1,2)
+if rdg == 1:
+    print(f"player {sfinal_win1} is the gusser")
+    print(f"and the player {sfinal_win2} is the hider")
+    print("")
+    print(f"player {sfinal_win2} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        r3 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {sfinal_win1} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r3 > 0 :
+                print(f"nice guess!! player {sfinal_win1} is the winner!!")
+            else :
+                print(f"bad guess , player {sfinal_win2} is the winner!!")
+        elif guess == "left" or "l" :
+            if l3 > 0 :
+                print(f"nice guess , player {sfinal_win1} is the winner!!")
+            else :
+                print(f"bad guess , player {sfinal_win2} is the winner!!")
+
+    elif hidech == "left" or "l" :
+        l3 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {sfinal_win1} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r3 > 0 :
+                print(f"nice guess , player {sfinal_win1} is the winner!!")
+            else :
+                print(f"bad guess , player {sfinal_win2} is the winner!!")
+        elif guess == "left" or "l" :
+            if l3 > 0 :
+                print(f"nice guess , player {sfinal_win1} is the winner")
+            else :
+                print(f"bad guess , player {sfinal_win2} is the winner")
+
+if rdg == 2:
+    print(f"player {sfinal_win2} is the gusser")
+    print(f"and the player {sfinal_win1} is the hider")
+    print("")
+    print(f"player {sfinal_win1} , which hand your going to hide the goal? right or left?")
+    hidech = input()
+    if hidech == "right" or "r" :
+        r3 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {sfinal_win2} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r3 > 0 :
+                print(f"nice guess , player {sfinal_win2} is the winner!!")
+            else :
+                print(f"bad guess , player {sfinal_win1} is the winner!!")
+        elif guess == "left" or "l" :
+            if l3 > 0 :
+                print(f"nice guess , player {sfinal_win2} is the winner")
+            else :
+                print(f"bad guess , player {sfinal_win1} is the winner")
+
+    elif hidech == "left" or "l" :
+        l3 += 1
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print("")
+        print(f"player {sfinal_win2} , guess the goal!")
+        guess = input("right or left?")
+        if guess == "right" or "r" :
+            if r3 > 0 :
+                print(f"nice guess , player {sfinal_win2} is the winner")
+                print("")
+                print(f"player {sfinal_win2} will go to final!")
+            else :
+                print(f"bad guess , player {sfinal_win1} is the winner")
+                print("")
+                print(f"player {sfinal_win1} will go to final!")
+        elif guess == "left" or "l" :
+            if l3 > 0 :
+                print(f"nice guess , player {sfinal_win2} is the winner")
+                print("")
+                print(f"player {sfinal_win2} will go to final!")
+            else :
+                print(f"bad guess , player {sfinal_win1} is the winner")
+                print("")
+                print(f"player {sfinal_win1} will go to final!")
+
+
+print("")
+print("send your credit card id :")
+creditNum = int(input())
+print("+1,000,000 Rials")
+
